@@ -44,6 +44,7 @@ function wp_syntaxhighlighter_head() {
 	echo '<link type="text/css" rel="Stylesheet" href="' . $path . '/styles/shCore.css"/>';
 	
 	$theme = get_option('wpsh_theme');
+	if(!strlen($theme)) $theme = "Midnight";
 	echo '<link type="text/css" rel="Stylesheet" href="' . $path . '/styles/shTheme' . basename($theme) . '.css"/>';
 	
 	$params = array();
@@ -52,7 +53,7 @@ function wp_syntaxhighlighter_head() {
 		$params["legacy"] = 1;
 	}
 	$brushes = get_option('wpsh_brushes');
-	if($brushes != "all") {
+	if(strlen($brushes) && $brushes != "all") {
 		$params["brushes"] = $brushes;
 	}
 	$query_params = "";
