@@ -66,7 +66,7 @@ function wp_syntaxhighlighter_head() {
 	echo '<script type="text/javascript" src="' . $path . '/script_combiner.php' . $query_params . '"></script>';
 	
 	echo '<script type="text/javascript">';
-//  echo 'SyntaxHighlighter.config.clipboardSwf = "' . $path . '/scripts/clipboard.swf";'
+	echo 'SyntaxHighlighter.config.clipboardSwf = "' . $path . '/scripts/clipboard.swf";'
 	echo 'SyntaxHighlighter.all();';
 	echo '</script>';
 }
