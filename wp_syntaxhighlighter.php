@@ -28,7 +28,7 @@ function wp_syntaxhighlighter_options() {
 	$theme = get_option('wpsh_theme');
 	if(!strlen($theme)) $theme = "Midnight";
 	echo '<tr valign="top"><th scope="row">Theme:</th><td><input type="text" size="20" name="wpsh_theme" value="' . $theme . '" /></td></tr>';
-	echo '</table><input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="wpsh_legacy_mode,wpsh_brushes,wpsh_theme" />'
+	echo '</table><input type="hidden" name="action" value="update" /><input type="hidden" name="page_options" value="wpsh_legacy_mode,wpsh_brushes,wpsh_theme" />';
 	echo '<p class="submit"><input type="submit" name="Submit" value="Update Options" /></p>';
 	echo '</form></div>';
 }
